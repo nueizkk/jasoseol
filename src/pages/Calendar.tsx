@@ -4,6 +4,7 @@ import {
   ChevronDownIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  XMarkIcon,
 } from '@heroicons/react/24/solid';
 import { format } from 'date-fns';
 
@@ -181,7 +182,6 @@ export default function Calendar() {
     setDetailsData(selected);
   }, [detailsId, flat]);
 
-  console.log(duties);
   useEffect(() => {
     if (detailsId) setDutyModal(false);
   }, [detailsId]);
@@ -376,6 +376,12 @@ export default function Calendar() {
       {/* details */}
       {detailsId && detailsData && (
         <div className='details'>
+          <div
+            className='details-modal-close-button'
+            onClick={() => setDetailsId(null)}
+          >
+            <XMarkIcon width={36} height={36} color='#fff' />
+          </div>
           <div
             className='details-modal-arrow'
             onClick={() => {

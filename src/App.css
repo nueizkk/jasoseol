@@ -201,6 +201,11 @@ th {
   border-radius: 8px;
   overflow-y: scroll;
 }
+.details-modal-close-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+}
 .details-modal-arrow {
   width: fit-content;
 }
